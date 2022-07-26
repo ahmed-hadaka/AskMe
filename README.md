@@ -1,2 +1,0 @@
-# AskMe
-cpp-console-project
