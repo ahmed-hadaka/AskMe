@@ -1,7 +1,7 @@
 # AskMe
 ## People ask questions and others answers them
 
-### files-based system
+### files-based system ( [serialization technique](https://www.geeksforgeeks.org/serialization-in-java/) )
 - Every time the user run it, you see the previous state (users/questions/answers)
 - Multiple users can use it in same time (parallel)
 - You send question. I see it
