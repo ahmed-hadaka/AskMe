@@ -22,7 +22,8 @@
 ### Correctness
 - You can’t do something wrong!
 - E.g. you can only remove your question which asked to someone else.
-- You can only see/edit the details of your question
+- You can only see/edit the details of your question.
+- Read the note above the Controller class. 
 
 # Screen shots
 ![11](https://user-images.githubusercontent.com/92885872/181076761-297066ae-caf5-4efb-85c4-04aac4a591e5.png)
