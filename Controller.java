@@ -22,9 +22,10 @@ public class Controller implements Serializable {
 			+ "[^-][\\p{L}0-9-]+(\\.[\\p{L}0-9-]+)*(\\.[\\p{L}]{2,})$";
 
 	public void go() {
-		// TODO: make sure you comment the line below if initially there is no users in
+		// TODO: make sure you Uncomment the line below if initially there is no users
+		// in
 		// the system.
-		users = deserialize(); // fetch data from database(users.txt)
+//		users = deserialize(); // fetch data from database(users.txt)   // here
 		int tries = 3;
 		if (!register())
 			return;
@@ -167,7 +168,7 @@ public class Controller implements Serializable {
 	private boolean login() {
 		System.out.println("Enter user name (no spaces) And Password");
 		String UserName = sc.next();
-		int PassWord = sc.nextInt();
+		String PassWord = sc.next();
 		User temp = getUser(UserName, PassWord);
 		if (temp != null) {
 			CurrentUser = temp;
@@ -181,7 +182,7 @@ public class Controller implements Serializable {
 		System.out.println("Enter user name (no spaces):");
 		String UserName = sc.next();
 		System.out.println("Enter Password:");
-		int PassWord = sc.nextInt();
+		String PassWord = sc.next();
 		System.out.println("Email:");
 		String Email = sc.next();
 		if (!isValidEmail(Email))
@@ -200,9 +201,9 @@ public class Controller implements Serializable {
 
 	}
 
-	private User getUser(String userName, int passWord) {
+	private User getUser(String userName, String passWord) {
 		for (User user : users) {
-			if ((user.getUSERNAME().equals(userName)) && (user.getPASSWORD() == passWord))
+			if ((user.getUSERNAME().equals(userName)) && (user.getPASSWORD().equals(passWord)))
 				return user;
 		}
 		return null;

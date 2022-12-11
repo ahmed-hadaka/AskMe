@@ -14,7 +14,7 @@ public class User implements Serializable {
 
 	private final int ID;
 	private final String USERNAME;
-	private final int PASSWORD;
+	private final String PASSWORD;
 	private final String EMAIL;
 	private final boolean ALLOW_ANONYMOUSE_QUESTIONS; // false ==> I can ask in an anonymous way (depend of the answerer
 														// sittings) AND other Can't ask me
@@ -22,7 +22,7 @@ public class User implements Serializable {
 	private Map<Question, List<Question>> QuestionToMe; // map parent q to list of thread questions
 	private List<Question> QuestionFromMe;
 
-	public User(String uSERNAME, int pASSWORD, String eMAIL, Boolean aLLOW_ANONYMOUSE_QUESTIONS) {
+	public User(String uSERNAME, String pASSWORD, String eMAIL, Boolean aLLOW_ANONYMOUSE_QUESTIONS) {
 		ID = (int) Math.floor(Math.random() * (200 - 100 + 1) + 100); // 100 <= id <= 200
 		USERNAME = uSERNAME;
 		PASSWORD = pASSWORD;
@@ -40,7 +40,7 @@ public class User implements Serializable {
 		return USERNAME;
 	}
 
-	public int getPASSWORD() {
+	public String getPASSWORD() {
 		return PASSWORD;
 	}
 
