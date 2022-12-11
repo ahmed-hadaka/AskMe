@@ -7,7 +7,7 @@
 - You send question. I see it
 - I answer the question or remove it, you see this update
 ### Login/Sign up/Sign Out
-- Any system allow a user to sign up (name, email, password, username, password)
+- Any system allow a user to sign up (username, email, password)
 - Also: As a user do you allow anonymous questions?
 ### User operations
 - Print questions: From you, To you, Feed Questions
@@ -21,7 +21,7 @@
 - If this parent question is removed, the whole thread is removed
 ### Correctness
 - You can’t do something wrong!
-- E.g. you can’t remove a question asked to someone else!
+- E.g. you can only remove your question which asked to someone else.
 - You can only see/edit the details of your question
 
 # Screen shots
@@ -32,7 +32,3 @@
 ![33](https://user-images.githubusercontent.com/92885872/181076785-68e5c13b-be20-451d-8944-e9f90e7a6ab3.png)
 
 ![44](https://user-images.githubusercontent.com/92885872/181076815-cab856b6-06e7-4cdb-b462-cbd6e92b12e3.png)
-
-# Acknowledgements
-- [Dr. Mostafa Saad](https://www.udemy.com/course/cpp-4skills/).
-
