@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 2L;
-	transient Scanner sc = new Scanner(System.in);
 
 	private final int ID;
 	private final String USERNAME;
@@ -76,7 +75,7 @@ public class User implements Serializable {
 	}
 
 	public Question answerQuestion(int QuestionId) {
-		sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		Question question = getQuestionById_ToMe(QuestionId);
 		if (question != null) {
 			if (!question.getAnswer().equals("")) {
@@ -128,7 +127,7 @@ public class User implements Serializable {
 	}
 
 	public Question askQuestion(int IdTo, boolean isAllowAnonyQ, int parentID) {
-		sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		if (!isAllowAnonyQ)
 			System.out.println("Note: Anonymous question not allowed to this user.");
 		System.out.print("Enter the question text: ");

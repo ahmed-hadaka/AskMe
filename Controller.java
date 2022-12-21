@@ -10,13 +10,11 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-/*
-* read the note at the beginning of go() method.
-*/
+
 public class Controller implements Serializable {
 
 	private static final long serialVersionUID = 3L;
-	transient Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
 
 	private User CurrentUser = null; // initial
 	List<User> users = new ArrayList<>();
@@ -24,8 +22,10 @@ public class Controller implements Serializable {
 			+ "[^-][\\p{L}0-9-]+(\\.[\\p{L}0-9-]+)*(\\.[\\p{L}]{2,})$";
 
 	public void go() {
-		// TODO: make sure you Uncomment the line below after you register with at least one user.
-//		users = deserialize(); // fetch data from database(users.txt)   // here
+		// TODO: make sure you Uncomment the line below if initially there is no users
+		// in
+		// the system.
+//		users = deserialize(); // fetch data from database(users.txt) // here
 		int tries = 3;
 		if (!register())
 			return;
@@ -256,7 +256,6 @@ public class Controller implements Serializable {
 		try {
 			ObjectInputStream is = new ObjectInputStream(new FileInputStream("users.txt"));
 			users = (ArrayList<User>) is.readObject();
-			sc = new Scanner(System.in);
 			is.close();
 		} catch (Exception e) {
 			e.printStackTrace();
